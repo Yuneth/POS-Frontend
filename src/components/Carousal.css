@@ -1,0 +1,76 @@
+.carousal-main{    
+    display:flex;
+    padding: 20px 20px 20px 20xp;
+    height: 700px;
+    width: fit-content;
+    position: relative;
+}
+
+.carousal-data {
+    background-image: linear-gradient(to right, transparent , rgb(0, 14, 95,0.5),rgb(0, 14, 95,0.5), transparent);
+}
+
+@keyframes changeImage1 {
+    0% { opacity: 0; }
+    25% { opacity: 1; z-index: 3; }
+    50% { opacity: 0; z-index: 2; }
+    100% { opacity: 0; z-index: 1; }
+  }
+  
+@keyframes changeImage2 {
+    0% { opacity: 0; }
+    25% { opacity: 0; z-index: 1; }
+    50% { opacity: 1; z-index: 3; }
+    75% { opacity: 0; z-index: 2; }
+    100% { opacity: 0; z-index: 1; }
+  }
+  
+@keyframes changeImage3 {
+    0% { opacity: 0; }
+    50% { opacity: 0; z-index: 1; }
+    75% { opacity: 1; z-index: 3; }
+    100% { opacity: 0; z-index: 2; }
+  }
+
+.carousal-image-1{
+    background-image: url('https://images.pexels.com/photos/129208/pexels-photo-129208.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: changeImage1 15s infinite;
+}
+.carousal-image-2{
+    background-image: url('https://images.pexels.com/photos/699122/pexels-photo-699122.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: changeImage2 15s infinite;
+}
+.carousal-image-3{
+    background-image: url('https://images.pexels.com/photos/901236/pexels-photo-901236.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: changeImage3 15s infinite;
+}
