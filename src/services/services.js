@@ -79,6 +79,19 @@ export const getUserById=(id)=>{
     })
 }
 
+export const getAllUsers=(id)=>{
+    let token = JSON.parse(localStorage.getItem('USER_INFO')).token;
+    let url= `${ENDPOINTS.GetAllUsers}`
+    return client.get(url,{headers:{Authorization:"Bearer "+token}})
+    .then((res)=>{
+        return res
+    })
+    .catch((err)=>{
+        console.log(err)
+        throw err
+    })
+}
+
 
 export const login = (data) => {
     return client.post(ENDPOINTS.login, data, {

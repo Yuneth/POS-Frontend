@@ -5,6 +5,7 @@ export const config={
 export const ENDPOINTS={
 
     //Admin Services
+    GetAllUsers: '/admin/users',
     GetAllUser: '/admin/getuserbyid/',
     DeleteUser: '/admin/deleteuser',
     addProduct: '/admin/addproduct',

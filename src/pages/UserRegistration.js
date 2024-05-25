@@ -60,7 +60,7 @@ export default function UserRegistration() {
 
           //Success
           toast.success("Registration Success");
-          //navigate("/login");
+          navigate("/");
         }
       })
       .catch((err) => {

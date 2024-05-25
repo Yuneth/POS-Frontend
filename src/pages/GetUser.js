@@ -45,7 +45,7 @@ export default function GetUser() {
 
                     <input class="registration-inputs" type="text" onChange={(e) => setId(e.target.value)} placeholder="Enter User ID" />
 
-                    <button onClick={callApi} class="button-main">Login</button>
+                    <button onClick={callApi} class="button-main">Search</button>
 
                 </div>
 

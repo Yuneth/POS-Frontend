@@ -28,6 +28,8 @@ import UserRegistrationAdmin from './pages/Admin/UserRegistrationAdmin';
 import Profile from './pages/Profile';
 import 'react-toastify/dist/ReactToastify.css';
 import { ToastContainer } from "react-toastify";
+import GetAllUser from './pages/GetAllUsers';
+import ReportView from './pages/ReportView';
 
 function App() {
 
@@ -60,6 +62,7 @@ function App() {
                     <Route path="/admin/updateuser" element={<UserUpdate />} />
                     <Route path="/admin/getuserbyid" element={<GetUser />} />
                     <Route path="/admin/deleteuser" element={<DeleteUser />} />
+                    <Route path="/admin/users" element={<GetAllUser/>}/>
                     <Route path="/admin/addproduct" element={<CreateProduct />} />
                     <Route path="/admin/addcategory" element={<AddCategory />} />
                     <Route path="/admin/loader" element={<Loader />} />
@@ -69,6 +72,7 @@ function App() {
                     <Route path="/updateuser" element={<UserUpdate />} />
                     <Route path="/addnewuser" element={<UserRegistrationAdmin />} />
                     <Route path="/profile" element={<Profile />} />
+                    <Route path="/reportview" element={<ReportView />} />
                     <Route path="*" element={<NoPage />} />
                   </Route>
                 </>

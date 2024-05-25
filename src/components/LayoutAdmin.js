@@ -131,6 +131,11 @@ export default function LayoutAdmin() {
                             }}><div class="menu-icon"><AiOutlineHistory /></div> Order History</div>
 
                             <div class="menu-item" onClick={() => {
+                                navigate('/reportview')
+                                setMenu(false)
+                            }}><div class="menu-icon"><BiInfoCircle /></div> Get Reports</div>
+
+                            <div class="menu-item" onClick={() => {
                                 navigate('/settings')
                                 setMenu(false)
                             }}><div class="menu-icon"><AiFillSetting /></div> Settings</div>
