@@ -1,5 +1,6 @@
 import { useSelector } from "react-redux";
 import { ENDPOINTS, config } from "../config/config";
+import axios from 'axios';
 
 const { client } = require("./Axios");
 
@@ -495,6 +496,35 @@ export const getOrdersByFilters = (key,data) => {
     return client.post(ENDPOINTS.getOrdersByFilters+"?key="+key, data, {headers: {"Content-Type": "application/json",Authorization:"Bearer "+token}})
     .then((res) => {return res})
     .catch((err) => {return err})
+}
+
+
+// export const generateReport = (type, format) => {
+//     let token = JSON.parse(localStorage.getItem('USER_INFO')).token;
+//     let url = `${ENDPOINTS.generateReport}${type}/${format}`;
+//     return axios.get(url, { headers: { Authorization: "Bearer " + token } })
+//         .then((res) => {
+//             console.log(res.data);
+//             return res.data;
+//         })
+//         .catch((err) => {
+//             console.log(err);
+//             throw err;
+//         });
+// }
+
+export const generateReport = (type, format) => {
+    let token = JSON.parse(localStorage.getItem('USER_INFO')).token;
+    let url = `${config.BASE_URL}${ENDPOINTS.generateReport}${type}/${format}`;
+    return axios.get(url, { headers: { Authorization: "Bearer " + token } })
+        .then((res) => {
+            console.log(res.data);
+            return res.data;
+        })
+        .catch((err) => {
+            console.log(err);
+            throw err;
+        });
 }
 
 

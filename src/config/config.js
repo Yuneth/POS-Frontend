@@ -20,6 +20,7 @@ export const ENDPOINTS={
     getOrdersByStatus:'/admin/getordersbystatus',
     getOrdersByFilters:'/admin/getordersbyfilter',
     placeOrderSendMail:'admin/sendMail',
+    generateReport: '/admin/report/',
 
 
     //User Services
